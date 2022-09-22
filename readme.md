@@ -43,7 +43,7 @@ $ pycollage process-collection /users/Anne/image_collection --component_size 30
 instead.
 
 You will notice that executing this will tell you where an index directory has been
-created. Given the paths from above, this should be `/uers/Anne/index`. Moreover
+created. Given the paths from above, this should be `/users/Anne/index`. Moreover
 another new directory has been created: `/users/Anne/image_collection_resized`.
 
 ### Building a collage
@@ -57,12 +57,11 @@ $ pycollage build /users/Anne/index /users/Anne/target_image
 ```
 
 where the first path corresponds to the path that was mentioned to you
-when executing `process_collection`.
+when executing `process-collection`.
 
 At the end of the process both the original target image as well as the collage
 imitating the target image will be opened. You can then save the collage to wherever
 you like.
-
 
 ### Runtime
 Note that this process will take longer
@@ -73,3 +72,9 @@ Note that this process will take longer
 Since the collage will scale up the original target image by `component_size` per
 dimensions - i.e., 20 by default - you might want to scale down your original
 target image to below 1000x1000 pixels.
+
+### Troubleshooting
+`pycollage` relies on [annoy](https://github.com/spotify/annoy) under the hood. Hence when trying to install
+`pycollage`, annoy will be attempted to be installed as well. Please check
+their [issues page](https://github.com/spotify/annoy/issues) to figure out more
+about possible installation problems and potential fixes.
