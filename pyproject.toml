@@ -1,3 +1,6 @@
+[project]
+version = "0.0.1"
+
 [build-system]
 requires = ['setuptools', 'setuptools-scm', 'wheel']
 
@@ -14,7 +17,7 @@ skip_glob = '\.eggs/*,\.git/*,\.venv/*,build/*,dist/*'
 default_section = 'THIRDPARTY'
 
 [tool.mypy]
-python_version = 3.8
+python_version = 3.9
 ignore_missing_imports = true
 no_implicit_optional = true
 check_untyped_defs = true
